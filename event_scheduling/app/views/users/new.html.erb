@@ -29,9 +29,9 @@
 	<div class="container-fluid">
  	<h1>SIGN UP</h1>
         <%= form_for :user, :html => {:id => "sig"}, url: user_create_path do |t| %>
-        First Name:<br><%= t.text_field :firstname %><br>
-        Last Name:<br><%= t.text_field :lastname %><br>
-        User Name:<br><%= t.text_field :username %><br>
+        First Name:<br><%= t.text_field :firstname, :required =>true %><br>
+        Last Name:<br><%= t.text_field :lastname, required: true %><br>
+        User Name:<br><%= t.text_field :username, required: true %><br>
         Email:<br><%= t.text_field :email %><br>
         Password:<br><%= t.password_field :password %><br>
         Confirm Password:<br><%= t.password_field :password_confirmation %><br>

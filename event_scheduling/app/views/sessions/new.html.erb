@@ -23,10 +23,10 @@
   </div>
 </nav>
 
-
+ 
 	<div class="container-fluid">
 	<h1>LOGIN</h1>
-	<%= form_tag 'user/login' do %>
+	<%= form_tag '/login',url:user_session_path do %>
 
           Email: <br><%= text_field_tag :email %><br>
           Password:<br> <%= password_field_tag :password %><br>
