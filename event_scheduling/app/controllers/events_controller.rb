@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		binding.pry
+		# binding.pry
 		@event= Event.new(event_params)
 		@event.owner_id = current_user.id
 		@event.save
@@ -34,7 +34,7 @@ class EventsController < ApplicationController
 	end
 
 	def update
-		binding.pry
+		# binding.pry
 		@event = Event.find_by_id(params[:id])
 		@event.update_attributes(event_params)
 		params['invitee_ids'].each do |t|
