@@ -6,12 +6,12 @@
 <body>
 
 	<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
+  <div class="container-fluid row">
+    <div class="navbar-header col-xs-6">
       <a class="container navbar-brand" href="#"><%= image_tag("logo2.png", :alt => "logo", :class => "img-responsive logo") %>
 </a>
     </div>
-    
+    <div class="col-xs-6" style="top: 30px;">
     <ul class="nav navbar-nav navbar-right">
       <!-- <li class="siglog"><h3><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#signup">Sign Up</button></h3></li> -->
       
@@ -20,19 +20,21 @@
 
       <li class="siglog"><%= link_to "<button class='btn btn-success btn-lg'>Sign up</button>".html_safe, user_signup_path %></li>
     </ul>
+    </div>
   </div>
 </nav>
 
  
 	<div class="container-fluid">
-	<h1>LOGIN</h1>
-	<%= form_tag '/login',url:user_session_path do %>
+    <h1>LOGIN</h1>
+  	<%= form_tag '/login',url:user_session_path do %>
 
-          Email: <br><%= text_field_tag :email %><br>
-          Password:<br> <%= password_field_tag :password %><br>
-          <%= submit_tag "Submit" %>
+      Email: <br><%= text_field_tag :email %><br>
+      Password:<br> <%= password_field_tag :password %><br>
+      <%= submit_tag "Submit" %>
 
-        <% end %>
-    </div>    
+    <% end %>
+  </div>    
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
